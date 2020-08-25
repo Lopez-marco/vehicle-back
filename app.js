@@ -1,11 +1,4 @@
 require("dotenv").config();
-// app.listen(process.env.PORT, () => {
-//     console.log(`server is listening on port ${process.env.PORT}`)
-// })
-
-// const sequelize = new Sequelize(process.env.DATABASE_URL, {
-//     dialect: 'postgres',
-// })
 
 let express = require("express");
 let app = express();
@@ -44,6 +37,6 @@ app.use("/user", user);
 ///////NO VALIDATE SESSION //////
 ///////NO VALIDATE SESSION //////
 app.use("/vehicle", vehicle);
-app.listen(3000, function () {
+app.listen(process.env.PORT, function () {
     console.log("App is Listenig on port 3000");
 });
