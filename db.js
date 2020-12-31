@@ -14,4 +14,7 @@ sequelize.authenticate().then(
         console.log(err);
     }
 );
-module.exports = sequelize;
+module.exports = sequelize
+
+
+////pg updated to 8.0.3 to make it Work
