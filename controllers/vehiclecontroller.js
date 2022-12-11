@@ -27,7 +27,7 @@ router.post("/addveh", validateSession, (req, res) => {
 
 router.get("/all", (req, res) => {
 
-    Vehicle.findAll()
+    CarModel.findAll()
         .then((vehicle) => res.status(200).json(vehicle))
         .catch((err) => res.status(500).json({ error: err }));
 });
